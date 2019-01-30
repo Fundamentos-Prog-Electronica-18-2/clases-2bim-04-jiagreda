@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int valores2[3][3] = {{7,2,9},{6,3,5},{8,10,4}}; // 3 filas y 3 columnas
+    double resultados[3][3];
+
+    cout << "Arreglo de valores" << endl;
+    for(int i=0; i<3;i++){
+        for(int j=0; j<3;j++){
+            cout << valores2[i][j] << "\t";
+        }
+         cout << endl;
+    }
+
+    cout << "Arreglo de resultados" << endl;
+    for(int i=0; i<3;i++){
+        for(int j=0; j<3;j++){
+                if(((valores2[i][j]%2)==0)){
+                       resultados[i][j] = pow(valores2[i][j],2);
+           }else{
+               resultados[i][j] = valores2[i][j];
+           }
+        }
+   }
+
+   for(int i=0; i<3;i++){
+        for(int j=0; j<3;j++){
+            cout << resultados[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
